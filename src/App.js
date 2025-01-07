@@ -4,6 +4,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import SocialProof from './components/SocialProof';
 import Testimonial from './components/Testimonial';
+import FAQ from './components/Faq';
 
 const App = () => (
   <div>
@@ -12,6 +13,7 @@ const App = () => (
     <SocialProof />
     <Features />
     <Testimonial />
+    <FAQ />
   </div>
 );
 
