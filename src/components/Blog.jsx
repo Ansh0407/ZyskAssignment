@@ -40,23 +40,23 @@ function Blog() {
   return (
     <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
       {/* Header Section */}
-      <div className="flex items-center justify-between">
-        <div>
+      <div className="flex flex-col sm:flex-row items-center justify-between">
+        <div className="mb-8 sm:mb-0">
           <h2 className="text-base font-semibold text-red-500 uppercase tracking-wide">Our blog</h2>
-          <h1 className="mt-2 text-3xl leading-8 font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Lastest blog posts
+          <h1 className="mt-2 text-3xl sm:text-4xl leading-8 font-bold tracking-tight text-gray-900">
+            Latest blog posts
           </h1>
-          <p className="mt-4 max-w-2xl text-xl text-gray-500">
-            Tool and strategies modern teams need to help their companies grow.
+          <p className="mt-4 text-lg sm:text-xl text-gray-500 max-w-2xl">
+            Tools and strategies modern teams need to help their companies grow.
           </p>
         </div>
-        <button className="bg-red-500 text-white px-5 py-2 rounded-lg text-lg">
+        <button className="w-full sm:w-auto bg-red-500 text-white px-5 py-2 rounded-lg text-lg sm:text-xl">
           View all posts
         </button>
       </div>
 
       {/* Blog Posts */}
-      <div className="mt-12 grid gap-16 lg:grid-cols-3 lg:max-w-none">
+      <div className="mt-12 grid gap-16 sm:grid-cols-2 lg:grid-cols-3 lg:max-w-none">
         {blogPosts.map((post, index) => (
           <div key={index} className="flex flex-col overflow-hidden">
             <div className="flex-shrink-0">
@@ -68,8 +68,8 @@ function Blog() {
                   {post.category}
                 </p>
                 <a href="#" className="block mt-2">
-                  <p className="text-xl font-semibold text-gray-900">{post.title}</p>
-                  <p className="mt-3 text-base text-gray-500">{post.description}</p>
+                  <p className="text-xl sm:text-2xl font-semibold text-gray-900">{post.title}</p>
+                  <p className="mt-3 text-base sm:text-lg text-gray-500">{post.description}</p>
                 </a>
               </div>
               <div className="mt-6 flex items-center">

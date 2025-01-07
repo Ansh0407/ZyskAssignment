@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
+import profile3 from '../assets/images/byson.png';
 import profile1 from '../assets/images/left.png';
 import profile2 from '../assets/images/profile.png';
-import profile3 from '../assets/images/byson.png';
 
 function FAQ() {
   const [openIndex, setOpenIndex] = useState(null);
@@ -64,12 +64,12 @@ function FAQ() {
       <div className="mt-12 text-center">
         <div className="relative flex justify-center items-center mb-4">
           <img src={profile1} alt="Profile 1" className="rounded-full w-12 h-12 border-2 border-white z-10" />
-          <img src={profile2} alt="Profile 2" className="rounded-full w-12 h-12 border-2 border-white z-20 -ml-4" />
-          <img src={profile3} alt="Profile 3" className="rounded-full w-12 h-12 border-2 border-white z-10 -ml-4" />
+          <img src={profile2} alt="Profile 2" className="rounded-full w-12 h-12 border-2 border-white z-20 -ml-4 sm:w-14 sm:h-14" />
+          <img src={profile3} alt="Profile 3" className="rounded-full w-12 h-12 border-2 border-white z-10 -ml-4 sm:w-14 sm:h-14" />
         </div>
         <p className="text-gray-600 mb-4">Still have questions?</p>
         <p className="text-gray-600 mb-6">Can't find the answer you're looking for? Please chat to our friendly team.</p>
-        <button className="bg-red-500 text-white px-6 py-2 rounded-lg">
+        <button className="w-full sm:w-auto bg-red-500 text-white px-6 py-2 rounded-lg">
           Get in touch
         </button>
       </div>

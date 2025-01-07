@@ -1,16 +1,16 @@
 import React from 'react';
 import logo from '../assets/images/logo.png';
-import profile from '../assets/images/profile.png';
+import profile from '../assets/images/profile.png'; 
 
 const Header = () => (
   <header className="bg-white shadow-md">
-    <div className="container mx-auto flex justify-between items-center p-4">
+    <div className="container mx-auto flex flex-wrap justify-between items-center p-4">
       {/* Logo and Navigation Links */}
-      <div className="flex items-center space-x-8 ml-32">
-        <img src={logo} alt="Zysk Logo" className="w-20 h-10" />
-        
+      <div className="flex items-center space-x-4 md:space-x-8 ml-4 md:ml-32">
+        <img src={logo} alt="Zysk Logo" className="w-16 h-8 md:w-20 md:h-10" />
+
         {/* Navigation Links */}
-        <nav className="flex space-x-8">
+        <nav className="hidden md:flex space-x-4 md:space-x-8">
           <a href="#home" className="text-gray-700 hover:text-red-500">Home</a>
           <div className="relative group">
             <a href="#products" className="text-gray-700 hover:text-red-500 flex items-center">
@@ -45,19 +45,18 @@ const Header = () => (
         <img src={profile} alt="Profile" className="rounded-full" />
       </div>
     </div>
+
+    {/* Mobile Navigation */}
+    <div className="md:hidden flex justify-center mt-4">
+      <nav className="flex flex-col space-y-2">
+        <a href="#home" className="text-gray-700 hover:text-red-500">Home</a>
+        <a href="#products" className="text-gray-700 hover:text-red-500">Products</a>
+        <a href="#resources" className="text-gray-700 hover:text-red-500">Resources</a>
+        <a href="#pricing" className="text-gray-700 hover:text-red-500">Pricing</a>
+      </nav>
+    </div>
   </header>
 );
 
 
-const CardSection = () => {
-  return (
-    <div className="flex justify-center items-center h-screen">
-      <img 
-        src={onboardingImage} 
-        alt="Testmyskills Onboarding" 
-        className="w-[1280px] h-[560px] object-cover"
-      />
-    </div>
-  );
-};
 export default Header;

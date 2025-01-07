@@ -47,29 +47,39 @@ const Features = () => {
   ];
 
   return (
-    <div className="p-10 font-inter text-center">
-      <h2 className="text-16 font-semibold text-red-500 mb-2">Features</h2>
-      <h3 className="text-2xl font-light text-gray-800 mb-4">
+    <section className="p-6 md:p-10 font-inter text-center">
+      {/* Heading */}
+      <h2 className="text-sm md:text-base font-semibold text-red-500 mb-2">
+        Features
+      </h2>
+      <h3 className="text-2xl md:text-3xl font-light text-gray-800 mb-4">
         Analytics that feels like it’s from the future
       </h3>
-      <p className="text-gray-600 max-w-3xl mx-auto mb-10">
-        Powerful, self-serve product and growth analytics to help you convert, engage, and retain more users. Trusted by over 4,000 startups.
+      <p className="text-gray-600 max-w-3xl mx-auto mb-10 text-sm md:text-base">
+        Powerful, self-serve product and growth analytics to help you convert,
+        engage, and retain more users. Trusted by over 4,000 startups.
       </p>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      {/* Features Grid */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {featureData.map((feature, index) => (
           <div
             key={index}
-            className="p-5"
+            className="bg-white border border-gray-200 rounded-lg p-5 shadow-sm hover:shadow-md transition duration-300"
           >
-            <img src={feature.icon} alt={feature.title} className="w-12 h-12 mb-3 mx-auto" />
-            <h4 className="text-lg font-semibold mb-2">
+            <img
+              src={feature.icon}
+              alt={feature.title}
+              className="w-12 h-12 mb-4 mx-auto"
+            />
+            <h4 className="text-lg font-semibold mb-3 text-gray-800">
               {feature.title}
             </h4>
             <p className="text-sm text-gray-600">{feature.description}</p>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 
